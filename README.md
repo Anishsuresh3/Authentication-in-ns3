@@ -9,21 +9,25 @@ Run command
 ./ns3 run scratch/auth-example.cc
 
 Code Usage
-For Open Auth
+For Open Auth:
 
-STA mac
+STA mac:
+
 mac.SetType("ns3::StaWifiMac", "Ssid", SsidValue(ssid), "ActiveProbing", BooleanValue(false), "OpenAuth", BooleanValue(true));
 
-AP mac
+AP mac:
+
 mac.SetType("ns3::ApWifiMac", "Ssid", SsidValue(ssid),"SharedKeyAuth", "OpenAuth", BooleanValue(true));
 
 
-For Shared Key Auth
+For Shared Key Auth:
 
-STA mac 
+STA mac:
+
 mac.SetType("ns3::StaWifiMac", "Ssid", SsidValue(ssid), "ActiveProbing", BooleanValue(false),"SharedKeyAuth",StringValue("passWoRD!!"));
 
-AP mac
+AP mac:
+
 mac.SetType("ns3::ApWifiMac", "Ssid", SsidValue(ssid),"SharedKeyAuth",StringValue("passWoRD!!"));
 
 **Dependency**
